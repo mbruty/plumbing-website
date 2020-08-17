@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="index.css">
+        <!-- jQuery CDN-->
+        <script
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+        crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+        <script src="cocoen/cocoen-jquery.js"></script>
+        <script src="cocoen/cocoen.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="cocoen/cocoen.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="main">
+            <section class="svg-container">
+                <img id="bathroom-img" class="svg-img" src="../public/plumb-01.svg"/>
+                <img id="kitchen-img" class="svg-img transparent" src="../public/plumb-02.svg"/>
+                <img id="svg-footer" src="../public/plumb-03.svg"/>
+                
+                <div class="btn-container">
+                    <a id="bathroom-btn" class="btn noselect selected">Bathrooms</a>
+                    <a id="kitchen-btn" class="btn noselect">Kitchens</a>
+                </div>
+                <div class="img-container">
+                    <div class="cocoen">
+                        <img src="https://www.howdens.com/-/media/howdens/assets/clh_asset_products/clh_asset_levela_108418/clh_asset_levelb_110114/clh_asset_levelc_25382348/ass_25397439/ass_25397439_4_3.jpg" alt="">
+                        <img src="https://contentgrid.homedepot-static.com/hdus/en_US/DTCCOMNEW/fetch/NexGen/ContentPage/335.jpg" alt="">
+                    </div>
+                    <div class="flex">
+                        <i id="prev-img" class="material-icons noselect">keyboard_arrow_left</i>
+                        <span class="icon-container noselect">
+                            <i id="slider-1" class="material-icons middle selected noselect">fiber_manual_record</i>
+                            <i id="slider-2" class="material-icons middle noselect">fiber_manual_record</i>
+                            <i id="slider-3" class="material-icons middle noselect">fiber_manual_record</i>
+                            <i id="slider-4" class="material-icons middle noselect">fiber_manual_record</i>
+                            <i id="slider-5" class="material-icons middle noselect">fiber_manual_record</i>
+                        </span>
+                        <i id="next-img" class="material-icons right-icon noselect">keyboard_arrow_right</i>
+                    </div>
+                </div>
+            </section>
+        <script>
+            document.addEventListener('DOMContentLoaded', function(){
+                new Cocoen();
+            });
+        </script>
+    </body>
+</html>

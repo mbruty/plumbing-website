@@ -1,0 +1,195 @@
+body{
+    font-family:courier,arial,helvetica;
+    font-size: 1.2em;
+    background-color: #dfdfdf;
+}
+
+.noselect{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+.main{
+    margin: auto;
+    max-width: 100ch;
+    width: 100%;
+    background-color: #f7f7f7;
+}
+.svg-container{
+    position: relative;
+}
+.svg-container .svg-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    position: relative;
+}
+#bathroom-img{
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 30%;
+    z-index: 3;
+}
+#kitchen-img{
+    margin-top: 0;
+    margin-bottom: -30%;
+    transform: translate(0, -99%);
+    width: 30%;
+    z-index: 3;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+.transparent{
+    opacity: 0;
+}
+#svg-footer{
+    transform: translate(0, -35%);
+    width: 100%;
+    margin: 0;
+    margin-bottom: -15%;
+}
+
+.svg-container .btn-container a.btn {
+    width: 40%;
+    transform: translate(0, -600%);
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    margin: 0.5em 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.2s ease, background 0.2s ease;
+}
+.img-container{
+    margin: auto;
+    width: 95%;
+}
+.img-container .material-icons{
+    font-size: 2em;
+}
+.img-container .material-icons.right-icon{
+    float: right;
+}
+.img-container .flex{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.img-container .icon-container{
+    font-size: 0.5em;
+    text-align: center;
+    display: inline-block;
+}
+
+.img-container i{
+    cursor: pointer;
+}
+.img-container .icon-container .selected{
+    color: #35C3FF;
+}
+/* Mobile */
+@media screen and (max-device-width: 800px) {
+    .svg-container h1{
+        font-size: 2rem;
+        width: 100%;
+        transform: translate(0, -100%);
+        color: black;
+        text-align:  center;
+        margin: none;
+    }
+
+    .svg-container .btn-container{
+        transform: translate(0, -100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 20%;
+        position: relative;
+        top: 0;
+    }
+
+    .svg-container .btn-container a.btn {
+        border: 0.1em solid #35C3FF;
+        color: #35C3FF;
+    }
+
+    .svg-container .btn-container a.btn.selected{
+        color: white;
+        background-color: #35C3FF;
+    }
+}
+
+/* iPad */
+@media screen and (device-width: 768px) {
+    .svg-container h1{
+        font-size: 2rem;
+        width: 100%;
+        transform: translate(0, -250%);
+        color: black;
+        text-align:  center;
+        margin: none;
+    }
+
+    .svg-container .btn-container{
+        transform: translate(0, -200%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 20%;
+        position: relative;
+        top: 0;
+    }
+
+    .svg-container .btn-container a.btn {
+        color: white;
+    }
+
+    .svg-container .btn-container a.btn.selected{
+        color: #000000;
+        background-color: #FFFFFF;
+    }
+
+}
+
+/* Desktop */
+
+@media screen and (min-width: 1200px) {
+
+    .svg-container .btn-container{
+        transform: translate(0, -00%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 20%;
+        position: relative;
+        z-index: 3;
+    }
+
+    .svg-container .btn-container a.btn {
+        color: black;
+        border-radius: 5px;
+        background: linear-gradient(145deg, #00a5ff, #008bd6);
+        box-shadow:  6px 6px 12px #007ec3, 
+                    -6px -6px 12px #00b6ff;        
+    }
+
+    .svg-container .btn-container a.btn.selected{
+        color: white;
+        border-radius: 5px;
+        background: #009aee;
+        box-shadow: inset 6px 6px 12px #007ec3, 
+                    inset -6px -6px 12px #00b6ff;
+    }
+
+}
