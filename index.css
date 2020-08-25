@@ -32,62 +32,63 @@ body{
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
-}
-.select{
-    -webkit-touch-callout: text; /* iOS Safari */
-    -webkit-user-select: text; /* Safari */
-     -khtml-user-select: text; /* Konqueror HTML */
-       -moz-user-select: text; /* Old versions of Firefox */
+     -moz-user-select: none; /* Old versions of Firefox */
+     -ms-user-select: none; /* Internet Explorer/Edge */
+     user-select: none; /* Non-prefixed version, currently
+     supported by Chrome, Edge, Opera and Firefox */
+    }
+    .select{
+        -webkit-touch-callout: text; /* iOS Safari */
+        -webkit-user-select: text; /* Safari */
+        -khtml-user-select: text; /* Konqueror HTML */
+        -moz-user-select: text; /* Old versions of Firefox */
         -ms-user-select: text; /* Internet Explorer/Edge */
-            user-select: text; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
-}
-.landing-container{
-    height: 100vh;
-    width: 100%;
-    background-image:
+        user-select: text; /* Non-prefixed version, currently
+        supported by Chrome, Edge, Opera and Firefox */
+    }
+    .landing-container{
+        height: 100vh;
+        width: 100%;
+        background-image:
         linear-gradient(
             to bottom,
             rgba(3, 3, 3, 0),
             rgba(0, 0, 0, 0.4)
-        ),
-        url("../public/IMG_20200824_224928.webp");
-    background-size: cover;
-}
-
-.landing-container .bottom{
-    position: absolute;
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-    bottom: 0px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 100%;
-    max-width: 110ch;
-    height: 350px;
-    color: white;
-}
-
-.landing-container .bottom .bottom-content{
-    display: flex;
-    max-width: 20ch;
-    flex-flow: column;
-}
-a.link{
-    color: hsl(24, 79%, 55%);
-}
-a.link-dark{
-    color: hsl(24, 63%, 37%);
-}
-.grey-bg{
-    padding: 5px;
-    background-color: rgba(255, 255, 255, 0.363);
-}
+            ),
+            url("../public/IMG_20200824_224928.webp");
+            background-size: cover;
+        }
+        
+        .landing-container .bottom{
+            position: absolute;
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+            bottom: 0px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 100%;
+            max-width: 110ch;
+            height: 350px;
+            color: white;
+        }
+        
+        .landing-container .bottom .bottom-content{
+            display: flex;
+            padding: 50px;
+            max-width: 20ch;
+            flex-flow: column;
+        }
+        a.link{
+            color: hsl(24, 79%, 55%);
+        }
+        a.link-dark{
+            color: hsl(24, 63%, 37%);
+        }
+        .grey-bg{
+            padding: 5px;
+            background-color: rgba(255, 255, 255, 0.363);
+        }
 .logo{
     width: 100px;
 }
@@ -207,7 +208,7 @@ li::before{
     float: left;
     margin-left: 50px;
     max-width: 50%;
-
+    
 }
 #testimonials .btn-box{
     display: flex;
@@ -219,7 +220,7 @@ li::before{
 }
 #testimonials .container{
     width: 100%;
-    height: 250px;
+    height: 400px;
     margin-bottom: 120px;
     background-color: #ececec;
 }
@@ -244,4 +245,32 @@ footer{
     -webkit-transition: opacity 0.3s ease-in-out;
     -moz-transition: opacity 0.3s ease-in-out;
     transition: opacity 0.3s ease-in-out;
+}
+.mid{
+    margin-left: 20%; 
+    color: white;
+    text-shadow: 2px 2px 5px #000000;
+}
+/* Mobile */
+@media (max-width: 812px){
+    body{
+        max-width: 100vw;
+    }
+    .contact{
+        display: none;
+    }
+    .mid{
+        margin-left: 5%;
+    }
+    .topic{
+        width: 80%;
+    }
+    #description{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .btn-box{
+        margin-right: 5px;
+    }
 }

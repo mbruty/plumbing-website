@@ -67,12 +67,40 @@ const updateTestimionials = () => {
         
     })
 }
-const testimonialLoop = () => {
 
+const testimonialLoop = () => {
     //Set testimonials
     updateTestimionials();
     // Change testimonial every 10 seconds
     setInterval(updateTestimionials, 10000)
+}
+const landingLoop = () => {
+    
+    const bottom = $('.bottom');
+    bottom.empty();
+
+    // Items to be shown
+    const items = [
+        `<div style="margin: auto;" class="bottom-content"><p>LEARN MORE ABOUT ACE IMPROVEMENTS</p><p>We are reliable fully qualified carpenter, carrying out quality work at affordable prices in and around Plymouth</p><a class="link" href="#why-choose">FIND OUT MORE</a></div>`,
+        `<div style="margin: auto;" class="bottom-content"><p>DISCOVER WHAT WE CAN DO FOR YOU</p><p>Lorem Ipsum dolor sit amet, congue sed diam nonum</p><a class="link" href="#what-can-we-do">FIND OUT MORE</a></div>`,
+        `<div style="margin: auto;" class="bottom-content"><p>SEE THE QUALITY WE PROVIDE</p><p>Lorem Ipsum dolor sit amet, congue sed diam nonum</p><a class="link" href="#project-section">VIEW PROJECTS</a></div>`
+    ];
+    // Set the default value
+    bottom.append(items[0]);
+
+    let counter = 0;
+    setInterval(() => {
+        // Loop back to the original
+        if(counter === 3){
+            counter = 0;
+        }
+        bottom.removeClass('in').addClass('out');
+        delay(300).then(() => {
+            bottom.empty();
+            bottom.append(items[counter++]);
+            bottom.removeClass('out').addClass('in');
+        })
+    }, 8000)
 }
 const loadFile = () => {
     $.ajax({
@@ -113,5 +141,8 @@ $(document).ready(() => {
 
     // Load the text file
     loadFile();
+    if($(window).width() < 812){
+        landingLoop();
+    }
 
 })
